@@ -1,0 +1,155 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  font-family: Poppins;
+}
+header {
+  background-color: #d2691e;
+  color: white;
+  text-align: center;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+section.deals {
+  background-color: #f7e7ce;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.deals h3{
+  background: #b6ad90;
+  color: white;
+  border-radius: 10px;
+  width: 15%;
+  font-size: 15px;
+  margin: auto;
+}
+
+.deals h3 p{
+  padding: 5px;
+}
+
+.homepage-features{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.image-container{
+  background: #7f4f24;
+  height: 50%;
+  width: 50%;
+}
+
+.image-container img{
+  height: 50%;
+  width: 50%;
+}
+
+.deal-banner {
+  background: white;
+  height: 308px;
+  width: 50%;
+  color: #522805;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.upper-description{
+  color: #a68a64;
+  width: 70%;
+}
+
+.lower-description{
+
+  width: 70%;
+  height: 40%;
+  line-height: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+
+section.menu {
+  padding: 20px;
+  text-align: center;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 200px;
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.menu-item h3 {
+  margin: 10px 0;
+}
+
+.menu-item button {
+  background-color: #d2691e;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-item button:hover {
+  background-color: #a0522d;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f7e7ce;
+  color: #522805;
+}
+
+/* Add this CSS to your stylesheet */
+#logout-button {
+  cursor: pointer;
+  outline: none;
+}
+
+.fa-right-from-bracket{
+  font-size: 20px;
+  z-index: 1;
+}
