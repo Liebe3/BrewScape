@@ -14,8 +14,9 @@
           <a href="#">Home</a>
           <a href="cart.html">Cart</a>
           <a href="profile.html">Profile</a>
-         <span id="logout-button"><i class="fa-solid fa-right-from-bracket"></i></span>
-
+          <span id="logout-button"
+            ><i class="fa-solid fa-right-from-bracket"></i
+          ></span>
         </nav>
       </div>
     </header>
@@ -44,19 +45,27 @@
 
     <section class="menu">
       <h2>Menu</h2>
-      <div class="menu-items">
-        
-        <!-- Add more items as needed -->
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search menu items..."
+        />
+        <button id="search-button">Search</button>
       </div>
-      
+      <div class="menu-items">
+        <!-- Menu items will be dynamically added here -->
+      </div>
     </section>
-
     <footer>
       <p>&copy; 2024 BrewScape Coffee Shop. All rights reserved.</p>
     </footer>
 
     <script src="app.js"></script>
     <script src="logout.js"></script>
-    <script src="https://kit.fontawesome.com/b098b18a13.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/b098b18a13.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

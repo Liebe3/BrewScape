@@ -1,7 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-*{
+* {
   font-family: Poppins;
 }
 header {
@@ -10,7 +9,7 @@ header {
   text-align: center;
 }
 
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,7 +33,7 @@ section.deals {
   margin-top: 20px;
 }
 
-.deals h3{
+.deals h3 {
   background: #b6ad90;
   color: white;
   border-radius: 10px;
@@ -43,25 +42,24 @@ section.deals {
   margin: auto;
 }
 
-.deals h3 p{
+.deals h3 p {
   padding: 5px;
 }
 
-.homepage-features{
+.homepage-features {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
-.image-container{
+.image-container {
   background: #7f4f24;
   height: 50%;
   width: 50%;
 }
 
-.image-container img{
+.image-container img {
   height: 50%;
   width: 50%;
 }
@@ -78,13 +76,12 @@ section.deals {
   align-items: center;
 }
 
-.upper-description{
+.upper-description {
   color: #a68a64;
   width: 70%;
 }
 
-.lower-description{
-
+.lower-description {
   width: 70%;
   height: 40%;
   line-height: 30px;
@@ -149,7 +146,76 @@ footer {
   outline: none;
 }
 
-.fa-right-from-bracket{
+.fa-right-from-bracket {
   font-size: 20px;
   z-index: 1;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#search-input {
+  flex-grow: 1;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 2px solid #6f4e37; /* Coffee brown color */
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  background-color: #fff8e7; /* Light cream color */
+  color: #3a3a3a;
+  transition: all 0.3s ease;
+}
+
+#search-input:focus {
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(111, 78, 55, 0.5);
+}
+
+#search-button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #6f4e37; /* Coffee brown color */
+  color: #fff;
+  border: 2px solid #6f4e37;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#search-button:hover {
+  background-color: #5a3f2b; /* Darker coffee brown */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .search-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #search-input,
+  #search-button {
+    width: 100%;
+    border-radius: 4px;
+    border: 2px solid #6f4e37;
+  }
+
+  #search-input {
+    margin-bottom: 10px;
+  }
+}
+
+/* Keep the existing highlight style */
+.highlight {
+  background-color: #ffd700; /* Golden yellow */
+  font-weight: bold;
+  padding: 2px 0;
 }

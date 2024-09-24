@@ -36,9 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 itemElement.className = "cart-item";
                 itemElement.innerHTML = `
                     <h3>${item.name}</h3>
-                    <p>Price: ${item.price} ₱</p>
+                    <p>Price: ₱${item.price} </p>
                     <p>Quantity: ${item.quantity}</p>
-                    <p>Total: ${item.price * item.quantity} ₱</p>
+                    <p>Total: ₱${item.price * item.quantity} </p>
                     <button onclick="removeItem(${index})">Remove</button>
                 `;
                 cartItemsContainer.appendChild(itemElement);
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        totalPriceElement.textContent = `Total: ${total} ₱`;
+        totalPriceElement.textContent = `Total: ₱ ${total} `;
         console.log("Cart items:", cart);
     }
 

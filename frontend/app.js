@@ -44,6 +44,59 @@ function initializeInventory() {
         console.log("Inventory initialized:", inventory);
     }
 }
+        //search function
+function setupSearch() {
+    const searchInput = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-button');
+  
+    searchButton.addEventListener('click', performSearch);
+    searchInput.addEventListener('input', performSearch);
+  }
+
+  function performSearch() {
+  const searchInput = document.getElementById('search-input');
+  const searchTerm = searchInput.value.toLowerCase().trim();
+  const menuItems = document.querySelectorAll('.menu-item');
+
+  menuItems.forEach(item => {
+    const itemName = item.dataset.name.toLowerCase();
+    if (searchTerm === '' || fuzzyMatch(itemName, searchTerm)) {
+      item.style.display = 'block';
+      if (searchTerm === '') {
+        removeHighlight(item);
+      } else {
+        highlightMatch(item, searchTerm);
+      }
+    } else {
+      item.style.display = 'none';
+      removeHighlight(item);
+    }
+  });
+}
+  function fuzzyMatch(str, pattern) {
+    const letters = pattern.split('');
+    let index = 0;
+    for (let letter of letters) {
+      index = str.indexOf(letter, index);
+      if (index === -1) {
+        return false;
+      }
+      index++;
+    }
+    return true;
+  }
+
+  function highlightMatch(item, searchTerm) {
+    const itemNameElement = item.querySelector('h3');
+    const itemName = itemNameElement.textContent;
+    const highlightedName = itemName.replace(new RegExp(`(${searchTerm.split('').join('|')})`, 'gi'), '<span class="highlight">$1</span>');
+    itemNameElement.innerHTML = highlightedName;
+  }
+
+  function removeHighlight(item) {
+    const itemNameElement = item.querySelector('h3');
+    itemNameElement.innerHTML = itemNameElement.textContent;
+  }
 
 // Load menu items into the page
 function loadMenuItems() {
@@ -68,7 +121,7 @@ function loadMenuItems() {
         menuItem.innerHTML = `
             <img src="${item.image || 'https://via.placeholder.com/150'}" alt="${item.name}" >
             <h3>${item.name} <span>[${item.quantity}]</span></h3>
-            <p>${item.price} P</p>
+            <p> <strong>₱</strong>${item.price}</p>
             <button class="add-to-cart">Add to Cart</button>
         `;
         menuItemsContainer.appendChild(menuItem);
@@ -202,4 +255,5 @@ document.addEventListener('DOMContentLoaded', () => {
     loadMenuItems();
     setupAddToCartButtons();
     initializeAdminAccount();
+    setupSearch();
 });
