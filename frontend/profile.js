@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <p><strong>Price:</strong> ${item.price || 'N/A'} ₱</p>
                     <p><strong>Quantity:</strong> ${item.quantity || 'N/A'}</p>
                     <p><strong>Total:</strong> ${item.price * item.quantity || 'N/A'} ₱</p>
+                    <p><b>Store: </b>BrewScape</p>
                 `;
                 purchaseElement.appendChild(itemElement);
             });
